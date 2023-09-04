@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+string IngresaComa(string f);
+int main()
+{
+    string f;
+    cout<<"ingresa una frase"<<endl;
+    getline(cin,f);
+    
+    cout<<IngresaComa(f)<<endl;
+
+    return 0;
+}
+
+string IngresaComa(string f) {
+    string resultado;
+    for (int i = 0; i < f.size(); i++) {
+        resultado += f[i];
+        if (i < f.size() - 1) {
+            resultado += ",";
+        }
+    }
+    return resultado;
+}
